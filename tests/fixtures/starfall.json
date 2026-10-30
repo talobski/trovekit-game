@@ -1,0 +1,1516 @@
+{
+  "pack": {
+    "schemaVersion": 2,
+    "id": "starfall",
+    "name": "Starfall Academy",
+    "version": "1.0.0",
+    "description": "An original example pack: students of five elements at a fictional academy.",
+    "labels": {
+      "game": "Starfall Academy",
+      "collect": "Gather",
+      "collected": "Gathered",
+      "reserve": "Reserve",
+      "acquire": "Bond",
+      "resource": "Mote",
+      "resources": "Motes",
+      "wildcard": "Starlight",
+      "wildcards": "Starlight",
+      "reserved": "Reserved",
+      "acquired": "Bonded",
+      "points": "Renown",
+      "collection": "Circle",
+      "achievements": "Honors"
+    },
+    "resourceKinds": [
+      {
+        "id": "ember",
+        "label": "Ember",
+        "tone": "orange",
+        "icon": "flame"
+      },
+      {
+        "id": "tide",
+        "label": "Tide",
+        "tone": "blue",
+        "icon": "droplet"
+      },
+      {
+        "id": "gale",
+        "label": "Gale",
+        "tone": "teal",
+        "icon": "wind"
+      },
+      {
+        "id": "stone",
+        "label": "Stone",
+        "tone": "slate",
+        "icon": "mountain"
+      },
+      {
+        "id": "spark",
+        "label": "Spark",
+        "tone": "violet",
+        "icon": "zap"
+      }
+    ],
+    "cardGroups": [
+      {
+        "id": "first-years",
+        "label": "First Years",
+        "kind": "tiered",
+        "deckSize": 28,
+        "cost": {
+          "min": 3,
+          "max": 5
+        },
+        "points": {
+          "min": 0,
+          "max": 1
+        }
+      },
+      {
+        "id": "adepts",
+        "label": "Adepts",
+        "kind": "tiered",
+        "deckSize": 22,
+        "cost": {
+          "min": 6,
+          "max": 8
+        },
+        "points": {
+          "min": 1,
+          "max": 3
+        }
+      },
+      {
+        "id": "masters",
+        "label": "Masters",
+        "kind": "tiered",
+        "deckSize": 16,
+        "cost": {
+          "min": 9,
+          "max": 12
+        },
+        "points": {
+          "min": 3,
+          "max": 5
+        }
+      }
+    ],
+    "cards": [
+      {
+        "id": "aria-ashgrove",
+        "group": "first-years",
+        "name": "Aria Ashgrove",
+        "shortName": "Aria A.",
+        "cost": {
+          "tide": 1,
+          "gale": 1,
+          "stone": 1
+        },
+        "permanentResource": "ember",
+        "points": 0,
+        "meta": {
+          "house": "Ashgrove"
+        }
+      },
+      {
+        "id": "bram-ashgrove",
+        "group": "first-years",
+        "name": "Bram Ashgrove",
+        "shortName": "Bram A.",
+        "cost": {
+          "stone": 2,
+          "spark": 1
+        },
+        "permanentResource": "ember",
+        "points": 0,
+        "meta": {
+          "house": "Ashgrove"
+        }
+      },
+      {
+        "id": "cass-ashgrove",
+        "group": "first-years",
+        "name": "Cass Ashgrove",
+        "shortName": "Cass A.",
+        "cost": {
+          "tide": 1,
+          "gale": 1,
+          "stone": 1,
+          "spark": 1
+        },
+        "permanentResource": "ember",
+        "points": 0,
+        "meta": {
+          "house": "Ashgrove"
+        }
+      },
+      {
+        "id": "dorian-ashgrove",
+        "group": "first-years",
+        "name": "Dorian Ashgrove",
+        "shortName": "Dorian A.",
+        "cost": {
+          "stone": 2,
+          "spark": 2
+        },
+        "permanentResource": "ember",
+        "points": 0,
+        "meta": {
+          "house": "Ashgrove"
+        }
+      },
+      {
+        "id": "elin-ashgrove",
+        "group": "first-years",
+        "name": "Elin Ashgrove",
+        "shortName": "Elin A.",
+        "cost": {
+          "tide": 2,
+          "gale": 1,
+          "stone": 1
+        },
+        "permanentResource": "ember",
+        "points": 0,
+        "meta": {
+          "house": "Ashgrove"
+        }
+      },
+      {
+        "id": "fenna-ashgrove",
+        "group": "first-years",
+        "name": "Fenna Ashgrove",
+        "shortName": "Fenna A.",
+        "cost": {
+          "stone": 4
+        },
+        "permanentResource": "ember",
+        "points": 1,
+        "meta": {
+          "house": "Ashgrove"
+        }
+      },
+      {
+        "id": "galen-ashgrove",
+        "group": "first-years",
+        "name": "Galen Ashgrove",
+        "shortName": "Galen A.",
+        "cost": {
+          "stone": 2,
+          "spark": 2,
+          "ember": 1
+        },
+        "permanentResource": "tide",
+        "points": 0,
+        "meta": {
+          "house": "Ashgrove"
+        }
+      },
+      {
+        "id": "hollis-ashgrove",
+        "group": "first-years",
+        "name": "Hollis Ashgrove",
+        "shortName": "Hollis A.",
+        "cost": {
+          "ember": 1,
+          "gale": 1,
+          "stone": 1
+        },
+        "permanentResource": "tide",
+        "points": 0,
+        "meta": {
+          "house": "Ashgrove"
+        }
+      },
+      {
+        "id": "ilya-ashgrove",
+        "group": "first-years",
+        "name": "Ilya Ashgrove",
+        "shortName": "Ilya A.",
+        "cost": {
+          "stone": 2,
+          "spark": 1
+        },
+        "permanentResource": "tide",
+        "points": 0,
+        "meta": {
+          "house": "Ashgrove"
+        }
+      },
+      {
+        "id": "juno-ashgrove",
+        "group": "first-years",
+        "name": "Juno Ashgrove",
+        "shortName": "Juno A.",
+        "cost": {
+          "ember": 1,
+          "gale": 1,
+          "stone": 1,
+          "spark": 1
+        },
+        "permanentResource": "tide",
+        "points": 0,
+        "meta": {
+          "house": "Ashgrove"
+        }
+      },
+      {
+        "id": "kael-ashgrove",
+        "group": "first-years",
+        "name": "Kael Ashgrove",
+        "shortName": "Kael A.",
+        "cost": {
+          "stone": 2,
+          "spark": 2
+        },
+        "permanentResource": "tide",
+        "points": 0,
+        "meta": {
+          "house": "Ashgrove"
+        }
+      },
+      {
+        "id": "lyra-ashgrove",
+        "group": "first-years",
+        "name": "Lyra Ashgrove",
+        "shortName": "Lyra A.",
+        "cost": {
+          "spark": 2,
+          "ember": 1,
+          "tide": 1
+        },
+        "permanentResource": "gale",
+        "points": 0,
+        "meta": {
+          "house": "Ashgrove"
+        }
+      },
+      {
+        "id": "mireille-ashgrove",
+        "group": "first-years",
+        "name": "Mireille Ashgrove",
+        "shortName": "Mireille A.",
+        "cost": {
+          "tide": 4
+        },
+        "permanentResource": "gale",
+        "points": 1,
+        "meta": {
+          "house": "Ashgrove"
+        }
+      },
+      {
+        "id": "nico-ashgrove",
+        "group": "first-years",
+        "name": "Nico Ashgrove",
+        "shortName": "Nico A.",
+        "cost": {
+          "spark": 2,
+          "ember": 2,
+          "tide": 1
+        },
+        "permanentResource": "gale",
+        "points": 0,
+        "meta": {
+          "house": "Ashgrove"
+        }
+      },
+      {
+        "id": "orin-ashgrove",
+        "group": "first-years",
+        "name": "Orin Ashgrove",
+        "shortName": "Orin A.",
+        "cost": {
+          "tide": 1,
+          "stone": 1,
+          "spark": 1
+        },
+        "permanentResource": "gale",
+        "points": 0,
+        "meta": {
+          "house": "Ashgrove"
+        }
+      },
+      {
+        "id": "pell-ashgrove",
+        "group": "first-years",
+        "name": "Pell Ashgrove",
+        "shortName": "Pell A.",
+        "cost": {
+          "spark": 2,
+          "ember": 1
+        },
+        "permanentResource": "gale",
+        "points": 0,
+        "meta": {
+          "house": "Ashgrove"
+        }
+      },
+      {
+        "id": "quill-ashgrove",
+        "group": "first-years",
+        "name": "Quill Ashgrove",
+        "shortName": "Quill A.",
+        "cost": {
+          "ember": 1,
+          "tide": 1,
+          "gale": 1,
+          "spark": 1
+        },
+        "permanentResource": "stone",
+        "points": 0,
+        "meta": {
+          "house": "Ashgrove"
+        }
+      },
+      {
+        "id": "rhea-ashgrove",
+        "group": "first-years",
+        "name": "Rhea Ashgrove",
+        "shortName": "Rhea A.",
+        "cost": {
+          "gale": 2,
+          "spark": 2
+        },
+        "permanentResource": "stone",
+        "points": 0,
+        "meta": {
+          "house": "Ashgrove"
+        }
+      },
+      {
+        "id": "soren-ashgrove",
+        "group": "first-years",
+        "name": "Soren Ashgrove",
+        "shortName": "Soren A.",
+        "cost": {
+          "ember": 2,
+          "tide": 1,
+          "gale": 1
+        },
+        "permanentResource": "stone",
+        "points": 0,
+        "meta": {
+          "house": "Ashgrove"
+        }
+      },
+      {
+        "id": "tamsin-ashgrove",
+        "group": "first-years",
+        "name": "Tamsin Ashgrove",
+        "shortName": "Tamsin A.",
+        "cost": {
+          "gale": 4
+        },
+        "permanentResource": "stone",
+        "points": 1,
+        "meta": {
+          "house": "Ashgrove"
+        }
+      },
+      {
+        "id": "ulric-ashgrove",
+        "group": "first-years",
+        "name": "Ulric Ashgrove",
+        "shortName": "Ulric A.",
+        "cost": {
+          "ember": 2,
+          "tide": 2,
+          "gale": 1
+        },
+        "permanentResource": "stone",
+        "points": 0,
+        "meta": {
+          "house": "Ashgrove"
+        }
+      },
+      {
+        "id": "vesna-ashgrove",
+        "group": "first-years",
+        "name": "Vesna Ashgrove",
+        "shortName": "Vesna A.",
+        "cost": {
+          "gale": 1,
+          "spark": 1,
+          "ember": 1
+        },
+        "permanentResource": "stone",
+        "points": 0,
+        "meta": {
+          "house": "Ashgrove"
+        }
+      },
+      {
+        "id": "aria-brightwater",
+        "group": "first-years",
+        "name": "Aria Brightwater",
+        "shortName": "Aria B.",
+        "cost": {
+          "gale": 2,
+          "stone": 1
+        },
+        "permanentResource": "spark",
+        "points": 0,
+        "meta": {
+          "house": "Brightwater"
+        }
+      },
+      {
+        "id": "bram-brightwater",
+        "group": "first-years",
+        "name": "Bram Brightwater",
+        "shortName": "Bram B.",
+        "cost": {
+          "ember": 1,
+          "tide": 1,
+          "gale": 1,
+          "stone": 1
+        },
+        "permanentResource": "spark",
+        "points": 0,
+        "meta": {
+          "house": "Brightwater"
+        }
+      },
+      {
+        "id": "cass-brightwater",
+        "group": "first-years",
+        "name": "Cass Brightwater",
+        "shortName": "Cass B.",
+        "cost": {
+          "gale": 2,
+          "stone": 2
+        },
+        "permanentResource": "spark",
+        "points": 0,
+        "meta": {
+          "house": "Brightwater"
+        }
+      },
+      {
+        "id": "dorian-brightwater",
+        "group": "first-years",
+        "name": "Dorian Brightwater",
+        "shortName": "Dorian B.",
+        "cost": {
+          "ember": 2,
+          "tide": 1,
+          "gale": 1
+        },
+        "permanentResource": "spark",
+        "points": 0,
+        "meta": {
+          "house": "Brightwater"
+        }
+      },
+      {
+        "id": "elin-brightwater",
+        "group": "first-years",
+        "name": "Elin Brightwater",
+        "shortName": "Elin B.",
+        "cost": {
+          "gale": 4
+        },
+        "permanentResource": "spark",
+        "points": 1,
+        "meta": {
+          "house": "Brightwater"
+        }
+      },
+      {
+        "id": "fenna-brightwater",
+        "group": "first-years",
+        "name": "Fenna Brightwater",
+        "shortName": "Fenna B.",
+        "cost": {
+          "ember": 2,
+          "tide": 2,
+          "gale": 1
+        },
+        "permanentResource": "spark",
+        "points": 0,
+        "meta": {
+          "house": "Brightwater"
+        }
+      },
+      {
+        "id": "galen-brightwater",
+        "group": "adepts",
+        "name": "Galen Brightwater",
+        "shortName": "Galen B.",
+        "cost": {
+          "tide": 2,
+          "gale": 2,
+          "stone": 2
+        },
+        "permanentResource": "ember",
+        "points": 1,
+        "meta": {
+          "house": "Brightwater"
+        }
+      },
+      {
+        "id": "hollis-brightwater",
+        "group": "adepts",
+        "name": "Hollis Brightwater",
+        "shortName": "Hollis B.",
+        "cost": {
+          "stone": 3,
+          "spark": 2,
+          "tide": 2
+        },
+        "permanentResource": "ember",
+        "points": 1,
+        "meta": {
+          "house": "Brightwater"
+        }
+      },
+      {
+        "id": "ilya-brightwater",
+        "group": "adepts",
+        "name": "Ilya Brightwater",
+        "shortName": "Ilya B.",
+        "cost": {
+          "tide": 4,
+          "gale": 2
+        },
+        "permanentResource": "ember",
+        "points": 2,
+        "meta": {
+          "house": "Brightwater"
+        }
+      },
+      {
+        "id": "juno-brightwater",
+        "group": "adepts",
+        "name": "Juno Brightwater",
+        "shortName": "Juno B.",
+        "cost": {
+          "stone": 4,
+          "spark": 2,
+          "tide": 1
+        },
+        "permanentResource": "ember",
+        "points": 2,
+        "meta": {
+          "house": "Brightwater"
+        }
+      },
+      {
+        "id": "kael-brightwater",
+        "group": "adepts",
+        "name": "Kael Brightwater",
+        "shortName": "Kael B.",
+        "cost": {
+          "tide": 5,
+          "gale": 3
+        },
+        "permanentResource": "ember",
+        "points": 2,
+        "meta": {
+          "house": "Brightwater"
+        }
+      },
+      {
+        "id": "lyra-brightwater",
+        "group": "adepts",
+        "name": "Lyra Brightwater",
+        "shortName": "Lyra B.",
+        "cost": {
+          "gale": 6
+        },
+        "permanentResource": "tide",
+        "points": 3,
+        "meta": {
+          "house": "Brightwater"
+        }
+      },
+      {
+        "id": "mireille-brightwater",
+        "group": "adepts",
+        "name": "Mireille Brightwater",
+        "shortName": "Mireille B.",
+        "cost": {
+          "spark": 3,
+          "ember": 3,
+          "gale": 2
+        },
+        "permanentResource": "tide",
+        "points": 2,
+        "meta": {
+          "house": "Brightwater"
+        }
+      },
+      {
+        "id": "nico-brightwater",
+        "group": "adepts",
+        "name": "Nico Brightwater",
+        "shortName": "Nico B.",
+        "cost": {
+          "gale": 2,
+          "stone": 2,
+          "spark": 2
+        },
+        "permanentResource": "tide",
+        "points": 1,
+        "meta": {
+          "house": "Brightwater"
+        }
+      },
+      {
+        "id": "orin-brightwater",
+        "group": "adepts",
+        "name": "Orin Brightwater",
+        "shortName": "Orin B.",
+        "cost": {
+          "spark": 3,
+          "ember": 2,
+          "gale": 2
+        },
+        "permanentResource": "tide",
+        "points": 1,
+        "meta": {
+          "house": "Brightwater"
+        }
+      },
+      {
+        "id": "pell-brightwater",
+        "group": "adepts",
+        "name": "Pell Brightwater",
+        "shortName": "Pell B.",
+        "cost": {
+          "gale": 4,
+          "stone": 2
+        },
+        "permanentResource": "tide",
+        "points": 2,
+        "meta": {
+          "house": "Brightwater"
+        }
+      },
+      {
+        "id": "quill-brightwater",
+        "group": "adepts",
+        "name": "Quill Brightwater",
+        "shortName": "Quill B.",
+        "cost": {
+          "stone": 4,
+          "spark": 2,
+          "ember": 1
+        },
+        "permanentResource": "gale",
+        "points": 2,
+        "meta": {
+          "house": "Brightwater"
+        }
+      },
+      {
+        "id": "rhea-brightwater",
+        "group": "adepts",
+        "name": "Rhea Brightwater",
+        "shortName": "Rhea B.",
+        "cost": {
+          "ember": 5,
+          "tide": 3
+        },
+        "permanentResource": "gale",
+        "points": 2,
+        "meta": {
+          "house": "Brightwater"
+        }
+      },
+      {
+        "id": "soren-brightwater",
+        "group": "adepts",
+        "name": "Soren Brightwater",
+        "shortName": "Soren B.",
+        "cost": {
+          "stone": 6
+        },
+        "permanentResource": "gale",
+        "points": 3,
+        "meta": {
+          "house": "Brightwater"
+        }
+      },
+      {
+        "id": "tamsin-brightwater",
+        "group": "adepts",
+        "name": "Tamsin Brightwater",
+        "shortName": "Tamsin B.",
+        "cost": {
+          "ember": 3,
+          "tide": 3,
+          "stone": 2
+        },
+        "permanentResource": "gale",
+        "points": 2,
+        "meta": {
+          "house": "Brightwater"
+        }
+      },
+      {
+        "id": "ulric-brightwater",
+        "group": "adepts",
+        "name": "Ulric Brightwater",
+        "shortName": "Ulric B.",
+        "cost": {
+          "stone": 2,
+          "spark": 2,
+          "ember": 2
+        },
+        "permanentResource": "gale",
+        "points": 1,
+        "meta": {
+          "house": "Brightwater"
+        }
+      },
+      {
+        "id": "vesna-brightwater",
+        "group": "adepts",
+        "name": "Vesna Brightwater",
+        "shortName": "Vesna B.",
+        "cost": {
+          "spark": 3,
+          "ember": 2,
+          "tide": 2
+        },
+        "permanentResource": "stone",
+        "points": 1,
+        "meta": {
+          "house": "Brightwater"
+        }
+      },
+      {
+        "id": "aria-coldspire",
+        "group": "adepts",
+        "name": "Aria Coldspire",
+        "shortName": "Aria C.",
+        "cost": {
+          "tide": 4,
+          "gale": 2
+        },
+        "permanentResource": "stone",
+        "points": 2,
+        "meta": {
+          "house": "Coldspire"
+        }
+      },
+      {
+        "id": "bram-coldspire",
+        "group": "adepts",
+        "name": "Bram Coldspire",
+        "shortName": "Bram C.",
+        "cost": {
+          "spark": 4,
+          "ember": 2,
+          "tide": 1
+        },
+        "permanentResource": "stone",
+        "points": 2,
+        "meta": {
+          "house": "Coldspire"
+        }
+      },
+      {
+        "id": "cass-coldspire",
+        "group": "adepts",
+        "name": "Cass Coldspire",
+        "shortName": "Cass C.",
+        "cost": {
+          "tide": 5,
+          "gale": 3
+        },
+        "permanentResource": "stone",
+        "points": 2,
+        "meta": {
+          "house": "Coldspire"
+        }
+      },
+      {
+        "id": "dorian-coldspire",
+        "group": "adepts",
+        "name": "Dorian Coldspire",
+        "shortName": "Dorian C.",
+        "cost": {
+          "stone": 6
+        },
+        "permanentResource": "spark",
+        "points": 3,
+        "meta": {
+          "house": "Coldspire"
+        }
+      },
+      {
+        "id": "elin-coldspire",
+        "group": "adepts",
+        "name": "Elin Coldspire",
+        "shortName": "Elin C.",
+        "cost": {
+          "tide": 3,
+          "gale": 3,
+          "stone": 2
+        },
+        "permanentResource": "spark",
+        "points": 2,
+        "meta": {
+          "house": "Coldspire"
+        }
+      },
+      {
+        "id": "fenna-coldspire",
+        "group": "adepts",
+        "name": "Fenna Coldspire",
+        "shortName": "Fenna C.",
+        "cost": {
+          "stone": 2,
+          "ember": 2,
+          "tide": 2
+        },
+        "permanentResource": "spark",
+        "points": 1,
+        "meta": {
+          "house": "Coldspire"
+        }
+      },
+      {
+        "id": "galen-coldspire",
+        "group": "masters",
+        "name": "Galen Coldspire",
+        "shortName": "Galen C.",
+        "cost": {
+          "tide": 3,
+          "gale": 3,
+          "stone": 3
+        },
+        "permanentResource": "ember",
+        "points": 3,
+        "meta": {
+          "house": "Coldspire"
+        }
+      },
+      {
+        "id": "hollis-coldspire",
+        "group": "masters",
+        "name": "Hollis Coldspire",
+        "shortName": "Hollis C.",
+        "cost": {
+          "stone": 3,
+          "spark": 3,
+          "tide": 2,
+          "gale": 2
+        },
+        "permanentResource": "ember",
+        "points": 3,
+        "meta": {
+          "house": "Coldspire"
+        }
+      },
+      {
+        "id": "ilya-coldspire",
+        "group": "masters",
+        "name": "Ilya Coldspire",
+        "shortName": "Ilya C.",
+        "cost": {
+          "tide": 6,
+          "gale": 3
+        },
+        "permanentResource": "ember",
+        "points": 4,
+        "meta": {
+          "house": "Coldspire"
+        }
+      },
+      {
+        "id": "juno-coldspire",
+        "group": "masters",
+        "name": "Juno Coldspire",
+        "shortName": "Juno C.",
+        "cost": {
+          "stone": 5,
+          "spark": 3,
+          "tide": 3
+        },
+        "permanentResource": "ember",
+        "points": 4,
+        "meta": {
+          "house": "Coldspire"
+        }
+      },
+      {
+        "id": "kael-coldspire",
+        "group": "masters",
+        "name": "Kael Coldspire",
+        "shortName": "Kael C.",
+        "cost": {
+          "ember": 7,
+          "gale": 3
+        },
+        "permanentResource": "tide",
+        "points": 5,
+        "meta": {
+          "house": "Coldspire"
+        }
+      },
+      {
+        "id": "lyra-coldspire",
+        "group": "masters",
+        "name": "Lyra Coldspire",
+        "shortName": "Lyra C.",
+        "cost": {
+          "stone": 4,
+          "spark": 4,
+          "ember": 4
+        },
+        "permanentResource": "tide",
+        "points": 4,
+        "meta": {
+          "house": "Coldspire"
+        }
+      },
+      {
+        "id": "mireille-coldspire",
+        "group": "masters",
+        "name": "Mireille Coldspire",
+        "shortName": "Mireille C.",
+        "cost": {
+          "ember": 3,
+          "gale": 3,
+          "stone": 3
+        },
+        "permanentResource": "tide",
+        "points": 3,
+        "meta": {
+          "house": "Coldspire"
+        }
+      },
+      {
+        "id": "nico-coldspire",
+        "group": "masters",
+        "name": "Nico Coldspire",
+        "shortName": "Nico C.",
+        "cost": {
+          "spark": 3,
+          "ember": 3,
+          "tide": 2,
+          "stone": 2
+        },
+        "permanentResource": "gale",
+        "points": 3,
+        "meta": {
+          "house": "Coldspire"
+        }
+      },
+      {
+        "id": "orin-coldspire",
+        "group": "masters",
+        "name": "Orin Coldspire",
+        "shortName": "Orin C.",
+        "cost": {
+          "tide": 6,
+          "stone": 3
+        },
+        "permanentResource": "gale",
+        "points": 4,
+        "meta": {
+          "house": "Coldspire"
+        }
+      },
+      {
+        "id": "pell-coldspire",
+        "group": "masters",
+        "name": "Pell Coldspire",
+        "shortName": "Pell C.",
+        "cost": {
+          "spark": 5,
+          "ember": 3,
+          "tide": 3
+        },
+        "permanentResource": "gale",
+        "points": 4,
+        "meta": {
+          "house": "Coldspire"
+        }
+      },
+      {
+        "id": "quill-coldspire",
+        "group": "masters",
+        "name": "Quill Coldspire",
+        "shortName": "Quill C.",
+        "cost": {
+          "gale": 7,
+          "spark": 3
+        },
+        "permanentResource": "stone",
+        "points": 5,
+        "meta": {
+          "house": "Coldspire"
+        }
+      },
+      {
+        "id": "rhea-coldspire",
+        "group": "masters",
+        "name": "Rhea Coldspire",
+        "shortName": "Rhea C.",
+        "cost": {
+          "ember": 4,
+          "tide": 4,
+          "gale": 4
+        },
+        "permanentResource": "stone",
+        "points": 4,
+        "meta": {
+          "house": "Coldspire"
+        }
+      },
+      {
+        "id": "soren-coldspire",
+        "group": "masters",
+        "name": "Soren Coldspire",
+        "shortName": "Soren C.",
+        "cost": {
+          "gale": 3,
+          "spark": 3,
+          "ember": 3
+        },
+        "permanentResource": "stone",
+        "points": 3,
+        "meta": {
+          "house": "Coldspire"
+        }
+      },
+      {
+        "id": "tamsin-coldspire",
+        "group": "masters",
+        "name": "Tamsin Coldspire",
+        "shortName": "Tamsin C.",
+        "cost": {
+          "tide": 3,
+          "gale": 3,
+          "stone": 2,
+          "ember": 2
+        },
+        "permanentResource": "spark",
+        "points": 3,
+        "meta": {
+          "house": "Coldspire"
+        }
+      },
+      {
+        "id": "ulric-coldspire",
+        "group": "masters",
+        "name": "Ulric Coldspire",
+        "shortName": "Ulric C.",
+        "cost": {
+          "stone": 6,
+          "ember": 3
+        },
+        "permanentResource": "spark",
+        "points": 4,
+        "meta": {
+          "house": "Coldspire"
+        }
+      },
+      {
+        "id": "vesna-coldspire",
+        "group": "masters",
+        "name": "Vesna Coldspire",
+        "shortName": "Vesna C.",
+        "cost": {
+          "tide": 5,
+          "gale": 3,
+          "stone": 3
+        },
+        "permanentResource": "spark",
+        "points": 4,
+        "meta": {
+          "house": "Coldspire"
+        }
+      }
+    ],
+    "achievementCategories": [
+      {
+        "id": "lore",
+        "label": "Bonds of Lore"
+      },
+      {
+        "id": "mastery",
+        "label": "Elemental Mastery"
+      },
+      {
+        "id": "triumph",
+        "label": "Triumphs"
+      },
+      {
+        "id": "renown",
+        "label": "Renown"
+      }
+    ],
+    "achievements": [
+      {
+        "id": "bond-of-two",
+        "category": "lore",
+        "name": "Bond of Two",
+        "description": "Bond both members of a sworn pair.",
+        "points": 2,
+        "requirement": {
+          "type": "relationships",
+          "min": 1,
+          "size": 2
+        }
+      },
+      {
+        "id": "twin-bonds",
+        "category": "lore",
+        "name": "Twin Bonds",
+        "description": "Bond two sworn pairs with no member shared.",
+        "points": 4,
+        "requirement": {
+          "type": "relationships",
+          "min": 2,
+          "size": 2,
+          "disjoint": true
+        }
+      },
+      {
+        "id": "the-triad",
+        "category": "lore",
+        "name": "The Triad",
+        "description": "Bond all three members of a triad.",
+        "points": 4,
+        "requirement": {
+          "type": "relationships",
+          "min": 1,
+          "size": 3
+        }
+      },
+      {
+        "id": "stone-wardens",
+        "category": "mastery",
+        "name": "Stone Wardens",
+        "description": "Bond 4 students with a Stone affinity.",
+        "points": 3,
+        "requirement": {
+          "type": "cardCount",
+          "min": 4,
+          "groups": [
+            "first-years",
+            "adepts",
+            "masters"
+          ],
+          "permanentResource": "stone"
+        }
+      },
+      {
+        "id": "tidecallers",
+        "category": "mastery",
+        "name": "Tidecallers",
+        "description": "Bond 4 students with a Tide affinity.",
+        "points": 3,
+        "requirement": {
+          "type": "cardCount",
+          "min": 4,
+          "groups": [
+            "first-years",
+            "adepts",
+            "masters"
+          ],
+          "permanentResource": "tide"
+        }
+      },
+      {
+        "id": "windweavers",
+        "category": "mastery",
+        "name": "Windweavers",
+        "description": "Bond 4 students with a Gale affinity.",
+        "points": 3,
+        "requirement": {
+          "type": "cardCount",
+          "min": 4,
+          "groups": [
+            "first-years",
+            "adepts",
+            "masters"
+          ],
+          "permanentResource": "gale"
+        }
+      },
+      {
+        "id": "grand-circle",
+        "category": "triumph",
+        "name": "Grand Circle",
+        "description": "Bond 5 students across at least 3 elements.",
+        "points": 4,
+        "requirement": {
+          "type": "all",
+          "of": [
+            {
+              "type": "cardCount",
+              "min": 5,
+              "groups": [
+                "first-years",
+                "adepts",
+                "masters"
+              ]
+            },
+            {
+              "type": "distinctPermanentResources",
+              "min": 3,
+              "groups": [
+                "first-years",
+                "adepts",
+                "masters"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "five-elements",
+        "category": "triumph",
+        "name": "Five Elements",
+        "description": "Bond a student of every element.",
+        "points": 5,
+        "requirement": {
+          "type": "distinctPermanentResources",
+          "min": 5,
+          "groups": [
+            "first-years",
+            "adepts",
+            "masters"
+          ]
+        }
+      },
+      {
+        "id": "council-of-masters",
+        "category": "triumph",
+        "name": "Council of Masters",
+        "description": "Bond 3 Masters.",
+        "points": 5,
+        "requirement": {
+          "type": "cardCount",
+          "min": 3,
+          "groups": [
+            "masters"
+          ]
+        }
+      },
+      {
+        "id": "rising-renown",
+        "category": "renown",
+        "name": "Rising Renown",
+        "description": "Bond 4 students, at least 2 Adepts or Masters.",
+        "points": 2,
+        "requirement": {
+          "type": "all",
+          "of": [
+            {
+              "type": "cardCount",
+              "min": 4,
+              "groups": [
+                "first-years",
+                "adepts",
+                "masters"
+              ]
+            },
+            {
+              "type": "cardCount",
+              "min": 2,
+              "groups": [
+                "adepts",
+                "masters"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "full-hall",
+        "category": "renown",
+        "name": "Full Hall",
+        "description": "Bond 6 students, at least 1 Master.",
+        "points": 3,
+        "requirement": {
+          "type": "all",
+          "of": [
+            {
+              "type": "cardCount",
+              "min": 6,
+              "groups": [
+                "first-years",
+                "adepts",
+                "masters"
+              ]
+            },
+            {
+              "type": "cardCount",
+              "min": 1,
+              "groups": [
+                "masters"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "starfall-legend",
+        "category": "renown",
+        "name": "Starfall Legend",
+        "description": "Bond 8 students, including 2 Masters.",
+        "points": 4,
+        "requirement": {
+          "type": "all",
+          "of": [
+            {
+              "type": "cardCount",
+              "min": 8,
+              "groups": [
+                "first-years",
+                "adepts",
+                "masters"
+              ]
+            },
+            {
+              "type": "cardCount",
+              "min": 2,
+              "groups": [
+                "masters"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "id": "pair-1",
+        "label": "Aria Ashgrove and Bram Ashgrove",
+        "cardIds": [
+          "aria-ashgrove",
+          "bram-ashgrove"
+        ],
+        "note": "Sworn study partners in the Starfall Academy example story.",
+        "source": "Original fiction for this example pack"
+      },
+      {
+        "id": "pair-2",
+        "label": "Cass Ashgrove and Dorian Ashgrove",
+        "cardIds": [
+          "cass-ashgrove",
+          "dorian-ashgrove"
+        ],
+        "note": "Sworn study partners in the Starfall Academy example story.",
+        "source": "Original fiction for this example pack"
+      },
+      {
+        "id": "pair-3",
+        "label": "Aria Brightwater and Bram Brightwater",
+        "cardIds": [
+          "aria-brightwater",
+          "bram-brightwater"
+        ],
+        "note": "Sworn study partners in the Starfall Academy example story.",
+        "source": "Original fiction for this example pack"
+      },
+      {
+        "id": "pair-4",
+        "label": "Cass Brightwater and Dorian Brightwater",
+        "cardIds": [
+          "cass-brightwater",
+          "dorian-brightwater"
+        ],
+        "note": "Sworn study partners in the Starfall Academy example story.",
+        "source": "Original fiction for this example pack"
+      },
+      {
+        "id": "pair-5",
+        "label": "Aria Coldspire and Bram Coldspire",
+        "cardIds": [
+          "aria-coldspire",
+          "bram-coldspire"
+        ],
+        "note": "Sworn study partners in the Starfall Academy example story.",
+        "source": "Original fiction for this example pack"
+      },
+      {
+        "id": "pair-6",
+        "label": "Galen Coldspire and Quill Coldspire",
+        "cardIds": [
+          "galen-coldspire",
+          "quill-coldspire"
+        ],
+        "note": "Sworn study partners in the Starfall Academy example story.",
+        "source": "Original fiction for this example pack"
+      },
+      {
+        "id": "triad-1",
+        "label": "Triad of Elin Ashgrove",
+        "cardIds": [
+          "elin-ashgrove",
+          "fenna-ashgrove",
+          "elin-brightwater"
+        ],
+        "note": "A triad that trained together in the example story.",
+        "source": "Original fiction for this example pack"
+      },
+      {
+        "id": "triad-2",
+        "label": "Triad of Cass Coldspire",
+        "cardIds": [
+          "cass-coldspire",
+          "dorian-coldspire",
+          "soren-coldspire"
+        ],
+        "note": "A triad that trained together in the example story.",
+        "source": "Original fiction for this example pack"
+      },
+      {
+        "id": "triad-3",
+        "label": "Triad of Kael Ashgrove",
+        "cardIds": [
+          "kael-ashgrove",
+          "lyra-brightwater",
+          "lyra-coldspire"
+        ],
+        "note": "A triad that trained together in the example story.",
+        "source": "Original fiction for this example pack"
+      }
+    ]
+  },
+  "rules": {
+    "schemaVersion": 2,
+    "playerCounts": {
+      "min": 2,
+      "max": 4
+    },
+    "resourceSupply": {
+      "2": 4,
+      "3": 5,
+      "4": 7
+    },
+    "wildcardSupply": 5,
+    "startingResources": 0,
+    "collect": {
+      "distinct": 3,
+      "pair": 2,
+      "pairMinSupply": 4,
+      "allowPartialDistinct": true
+    },
+    "holdingCap": 10,
+    "reserveCap": 3,
+    "wildcardsOnReserve": 1,
+    "market": {
+      "tieredSlots": 4,
+      "uniqueSlots": 0
+    },
+    "uniqueLimitPerPlayer": 0,
+    "achievementsDrawn": {
+      "2": 3,
+      "3": 4,
+      "4": 5
+    },
+    "targetPoints": 15,
+    "tieBreak": "fewest-acquired"
+  }
+}

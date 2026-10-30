@@ -1,0 +1,52 @@
+name: Bug report
+description: Something in the game, admin or self-hosting setup doesn't work as documented.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please don't report security vulnerabilities here; report them privately as SECURITY.md describes (Security tab → Report a vulnerability).
+        Remove session tokens, room codes of live games, private hostnames and anything from a pack you can't share publicly.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Start the servers with …
+        2. In the admin, …
+        3. …
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Game (playing, rooms, reconnecting)
+        - Admin (packs, cards, images, publishing)
+        - Import or export
+        - Self-hosting (proxy, configuration, storage)
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Version or commit, Node version (`node -v`), operating system, browser and device, and how you run it (dev, production, behind a proxy).
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Server output or browser console errors, with private details removed.
+      render: text

@@ -1,0 +1,25 @@
+name: Feature request
+description: Suggest an improvement to the game, admin or documentation.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe what you were trying to do and what got in the way.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or workarounds you have considered
+  - type: markdown
+    attributes:
+      value: |
+        Content packs can change names, artwork and supported balance settings, but not game mechanics. Proposals for new mechanics or schema changes need discussion before any pull request.

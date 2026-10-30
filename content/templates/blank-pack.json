@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 2,
+  "id": "new-pack",
+  "name": "New pack",
+  "version": "1.0.0",
+  "description": "A new content pack",
+  "labels": {
+    "game": "New pack",
+    "collect": "Collect {label:resources}",
+    "collected": "Collected {label:resources}",
+    "reserve": "Reserve",
+    "acquire": "Acquire",
+    "resource": "Resource",
+    "resources": "Resources",
+    "wildcard": "Wildcard",
+    "wildcards": "Wildcards",
+    "reserved": "Reserved",
+    "acquired": "Acquired",
+    "points": "Points",
+    "collection": "Collection",
+    "achievements": "Achievements",
+    "card": "Card",
+    "cards": "Cards"
+  },
+  "resourceKinds": [
+    {
+      "id": "resource-1",
+      "label": "Resource 1",
+      "tone": "rose",
+      "icon": "circle"
+    },
+    {
+      "id": "resource-2",
+      "label": "Resource 2",
+      "tone": "amber",
+      "icon": "square"
+    },
+    {
+      "id": "resource-3",
+      "label": "Resource 3",
+      "tone": "green",
+      "icon": "triangle"
+    },
+    {
+      "id": "resource-4",
+      "label": "Resource 4",
+      "tone": "sky",
+      "icon": "diamond"
+    },
+    {
+      "id": "resource-5",
+      "label": "Resource 5",
+      "tone": "violet",
+      "icon": "hexagon"
+    }
+  ],
+  "cardGroups": [
+    {
+      "id": "tier-1",
+      "label": "Tier 1",
+      "kind": "tiered",
+      "deckSize": 1,
+      "cost": {
+        "min": 3,
+        "max": 5
+      },
+      "points": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    {
+      "id": "tier-2",
+      "label": "Tier 2",
+      "kind": "tiered",
+      "deckSize": 1,
+      "cost": {
+        "min": 6,
+        "max": 8
+      },
+      "points": {
+        "min": 1,
+        "max": 3
+      }
+    },
+    {
+      "id": "tier-3",
+      "label": "Tier 3",
+      "kind": "tiered",
+      "deckSize": 1,
+      "cost": {
+        "min": 9,
+        "max": 12
+      },
+      "points": {
+        "min": 3,
+        "max": 5
+      }
+    }
+  ],
+  "cards": [],
+  "achievementCategories": [
+    {
+      "id": "collection",
+      "label": "Collection"
+    }
+  ],
+  "achievements": [
+    {
+      "id": "starter-set",
+      "category": "collection",
+      "name": "Starter set",
+      "description": "{label:acquire} 3 {label:cards}.",
+      "points": 2,
+      "requirement": {
+        "type": "cardCount",
+        "min": 3
+      }
+    },
+    {
+      "id": "growing-collection",
+      "category": "collection",
+      "name": "Growing collection",
+      "description": "{label:acquire} 6 {label:cards}.",
+      "points": 3,
+      "requirement": {
+        "type": "cardCount",
+        "min": 6
+      }
+    },
+    {
+      "id": "full-collection",
+      "category": "collection",
+      "name": "Full collection",
+      "description": "{label:acquire} 9 {label:cards}.",
+      "points": 4,
+      "requirement": {
+        "type": "cardCount",
+        "min": 9
+      }
+    },
+    {
+      "id": "variety",
+      "category": "collection",
+      "name": "Variety",
+      "description": "{label:acquire} {label:cards} of 4 different kinds.",
+      "points": 3,
+      "requirement": {
+        "type": "distinctPermanentResources",
+        "min": 4
+      }
+    },
+    {
+      "id": "top-tier",
+      "category": "collection",
+      "name": "Top tier",
+      "description": "{label:acquire} 2 {label:cards} from {group:tier-3}.",
+      "points": 3,
+      "requirement": {
+        "type": "cardCount",
+        "min": 2,
+        "groups": [
+          "tier-3"
+        ]
+      }
+    }
+  ],
+  "relationships": []
+}

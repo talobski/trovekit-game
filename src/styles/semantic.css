@@ -1,0 +1,197 @@
+/*
+ * Semantic extensions of the base theme (theme.css). Contrast overrides are
+ * documented below.
+ *
+ *   success, warning, info   Status colours and their foregrounds.
+ *   tone-*, tone-*-soft      Resource-kind identity tones, never status. Packs pick
+ *                            a tone name and can never inject a colour. Fills
+ *                            are rich: light L 0.52, C 0.15 (was 0.11);
+ *                            dark L ~0.72, C ~0.15 (was L 0.82, C 0.09, which read as
+ *                            pastel). Soft tones (panel tints) are unchanged:
+ *                            soft L 0.955, C 0.025; dark soft L 0.32. Slate stays
+ *                            near-neutral. Icons on fills keep >= 3:1 (measured).
+ *   tone-fg                  Text on a solid tone fill (token discs).
+ *   mark                     Reserved identity colours.
+ *
+ * Accessibility adjustments: five text colours originally sat just under
+ * WCAG AA 4.5:1 for normal-size text. Each keeps its original hue and chroma;
+ * only lightness moves, to the nearest value reaching
+ * 4.6:1 on its worst background:
+ *   muted-foreground  light 0.590 -> 0.531, dark 0.562 -> 0.638 (core token)
+ *   success           light 0.56 -> 0.535 (also as a fill under its foreground)
+ *   tone-orange       light 0.56 -> 0.54
+ *   tone-teal         light 0.52 -> 0.513
+ */
+:root {
+  /* Fixed neutral roles keep photo overlays readable in both themes. */
+  --photo-foreground: oklch(0.985104 0 0);
+  --photo-scrim: oklch(0.144788 0 0);
+  /* Blue action callout. The border uses the blue supporting tone
+     so it reads in both themes. */
+  --callout-from: oklch(0.993 0.004 239);
+  --callout-to: oklch(0.958 0.026 239);
+  --callout-border: color-mix(in oklab, var(--tone-blue) 45%, transparent);
+  --success: oklch(0.535 0.13 155);
+  --success-foreground: oklch(0.985104 0 0);
+  --warning: oklch(0.6 0.14 65);
+  --warning-foreground: oklch(0.985104 0 0);
+  --info: oklch(0.55 0.15 250);
+  --info-foreground: oklch(0.985104 0 0);
+
+  --tone-rose: oklch(0.52 0.15 15);
+  --tone-rose-soft: oklch(0.955 0.025 15);
+  --tone-orange: oklch(0.54 0.16 55);
+  --tone-orange-soft: oklch(0.955 0.025 55);
+  --tone-amber: oklch(0.52 0.15 80);
+  --tone-amber-soft: oklch(0.955 0.025 80);
+  --tone-lime: oklch(0.52 0.15 125);
+  --tone-lime-soft: oklch(0.955 0.025 125);
+  --tone-green: oklch(0.52 0.15 150);
+  --tone-green-soft: oklch(0.955 0.025 150);
+  --tone-teal: oklch(0.513 0.15 200);
+  --tone-teal-soft: oklch(0.955 0.025 200);
+  --tone-sky: oklch(0.52 0.15 230);
+  --tone-sky-soft: oklch(0.955 0.025 230);
+  --tone-blue: oklch(0.52 0.15 250);
+  --tone-blue-soft: oklch(0.955 0.025 250);
+  --tone-indigo: oklch(0.52 0.15 270);
+  --tone-indigo-soft: oklch(0.955 0.025 270);
+  --tone-violet: oklch(0.52 0.15 285);
+  --tone-violet-soft: oklch(0.955 0.025 285);
+  --tone-pink: oklch(0.48 0.14 343);
+  --tone-pink-soft: oklch(0.955 0.025 343);
+  --tone-slate: oklch(0.52 0.04 250);
+  --tone-slate-soft: oklch(0.955 0.01 250);
+  --tone-fg: oklch(0.985104 0 0);
+
+  --mark: oklch(0.67 0.175 42);
+  --mark-foreground: oklch(0.99 0.005 60);
+}
+
+.dark {
+  --callout-from: oklch(0.194 0.014 230);
+  --callout-to: oklch(0.25 0.035 234);
+  --success: oklch(0.72 0.15 155);
+  --success-foreground: oklch(0.204627 0 0);
+  --warning: oklch(0.78 0.14 75);
+  --warning-foreground: oklch(0.204627 0 0);
+  --info: oklch(0.65 0.15 248);
+  --info-foreground: oklch(0.204627 0 0);
+
+  --tone-rose: oklch(0.72 0.15 15);
+  --tone-rose-soft: oklch(0.32 0.05 15);
+  --tone-orange: oklch(0.72 0.15 55);
+  --tone-orange-soft: oklch(0.32 0.05 55);
+  --tone-amber: oklch(0.74 0.14 80);
+  --tone-amber-soft: oklch(0.32 0.05 80);
+  --tone-lime: oklch(0.74 0.15 125);
+  --tone-lime-soft: oklch(0.32 0.05 125);
+  --tone-green: oklch(0.72 0.15 150);
+  --tone-green-soft: oklch(0.32 0.05 150);
+  --tone-teal: oklch(0.72 0.13 200);
+  --tone-teal-soft: oklch(0.32 0.05 200);
+  --tone-sky: oklch(0.72 0.13 230);
+  --tone-sky-soft: oklch(0.32 0.05 230);
+  --tone-blue: oklch(0.70 0.15 250);
+  --tone-blue-soft: oklch(0.32 0.05 250);
+  --tone-indigo: oklch(0.70 0.15 270);
+  --tone-indigo-soft: oklch(0.32 0.05 270);
+  --tone-violet: oklch(0.70 0.15 285);
+  --tone-violet-soft: oklch(0.32 0.05 285);
+  --tone-pink: oklch(0.70 0.14 343);
+  --tone-pink-soft: oklch(0.32 0.05 343);
+  --tone-slate: oklch(0.74 0.04 250);
+  --tone-slate-soft: oklch(0.32 0.02 250);
+  --tone-fg: oklch(0.17227 0.010216 220.179599);
+}
+
+@theme inline {
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+  --color-tone-rose: var(--tone-rose);
+  --color-tone-rose-soft: var(--tone-rose-soft);
+  --color-tone-rose-fg: var(--tone-fg);
+  --color-tone-orange: var(--tone-orange);
+  --color-tone-orange-soft: var(--tone-orange-soft);
+  --color-tone-orange-fg: var(--tone-fg);
+  --color-tone-amber: var(--tone-amber);
+  --color-tone-amber-soft: var(--tone-amber-soft);
+  --color-tone-amber-fg: var(--tone-fg);
+  --color-tone-lime: var(--tone-lime);
+  --color-tone-lime-soft: var(--tone-lime-soft);
+  --color-tone-lime-fg: var(--tone-fg);
+  --color-tone-green: var(--tone-green);
+  --color-tone-green-soft: var(--tone-green-soft);
+  --color-tone-green-fg: var(--tone-fg);
+  --color-tone-teal: var(--tone-teal);
+  --color-tone-teal-soft: var(--tone-teal-soft);
+  --color-tone-teal-fg: var(--tone-fg);
+  --color-tone-sky: var(--tone-sky);
+  --color-tone-sky-soft: var(--tone-sky-soft);
+  --color-tone-sky-fg: var(--tone-fg);
+  --color-tone-blue: var(--tone-blue);
+  --color-tone-blue-soft: var(--tone-blue-soft);
+  --color-tone-blue-fg: var(--tone-fg);
+  --color-tone-indigo: var(--tone-indigo);
+  --color-tone-indigo-soft: var(--tone-indigo-soft);
+  --color-tone-indigo-fg: var(--tone-fg);
+  --color-tone-violet: var(--tone-violet);
+  --color-tone-violet-soft: var(--tone-violet-soft);
+  --color-tone-violet-fg: var(--tone-fg);
+  --color-tone-pink: var(--tone-pink);
+  --color-tone-pink-soft: var(--tone-pink-soft);
+  --color-tone-pink-fg: var(--tone-fg);
+  --color-tone-slate: var(--tone-slate);
+  --color-tone-slate-soft: var(--tone-slate-soft);
+  --color-tone-slate-fg: var(--tone-fg);
+  --color-mark: var(--mark);
+  --color-mark-foreground: var(--mark-foreground);
+}
+
+@utility callout-brand {
+  background-image: linear-gradient(120deg, var(--callout-from) 0%, var(--callout-to) 100%);
+  border-color: var(--callout-border);
+}
+
+/* Market tiers: the callout's shape in a supporting tone, quieter than the
+   collect callout. callout-tier-<n> supplies the tone and a border
+   that grows stronger with the tier. */
+@utility callout-tier {
+  background-image: linear-gradient(
+    120deg,
+    color-mix(in oklab, var(--callout-tone-soft) 20%, var(--background)) 0%,
+    color-mix(in oklab, var(--callout-tone-soft) 50%, var(--background)) 100%
+  );
+}
+@utility callout-tier-1 {
+  --callout-tone-soft: var(--tone-teal-soft);
+  border-color: color-mix(in oklab, var(--tone-teal) 28%, transparent);
+}
+@utility callout-tier-2 {
+  --callout-tone-soft: var(--tone-amber-soft);
+  border-color: color-mix(in oklab, var(--tone-amber) 38%, transparent);
+}
+@utility callout-tier-3 {
+  --callout-tone-soft: var(--tone-violet-soft);
+  border-color: color-mix(in oklab, var(--tone-violet) 50%, transparent);
+}
+
+/* Tone fills (token discs, admin swatches): a restrained two-stop gradient over the
+   solid tone, a little lighter at the top and deeper at the bottom. Chart bars and
+   other tiny markers keep the plain solid tone. */
+@utility resource-shade {
+  background-image: linear-gradient(to bottom, color-mix(in oklab, white 12%, transparent), color-mix(in oklab, black 20%, transparent));
+}
+
+/* Accessibility adjustment of a core token; see the note at the top. */
+:root {
+  --muted-foreground: oklch(0.531 0.007551 233.726491);
+}
+
+.dark {
+  --muted-foreground: oklch(0.638 0.042451 231.737285);
+}

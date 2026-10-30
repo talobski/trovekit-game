@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/space-grotesk";
+@import "./theme.css";
+@import "./semantic.css";
+@import "./cards.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Trovekit Game content widths. */
+@theme {
+  --container-board: 76rem;
+  --container-form: 26rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply bg-background;
+    /* The page keeps the platform's own scrollbar: a themed, transparent track
+       made it read as an overlaid scroll area and cut the header and footer
+       dividers short at the scrollbar's edge. */
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply type-heading;
+  }
+}
+
+/* On phones Sonner places its fixed toast list at the left offset but sizes it
+   to the full viewport, so the list ends one offset past the right edge, which
+   can let iOS Safari pan the whole page sideways into that space. Size the list
+   by its two offsets instead, and let each toast fill it. The doubled
+   attribute outranks Sonner's runtime-injected rules. */
+@media (max-width: 600px) {
+  [data-sonner-toaster][data-sonner-toaster] {
+    width: auto;
+  }
+  [data-sonner-toaster][data-sonner-toaster] [data-sonner-toast] {
+    width: 100%;
+  }
+}
+
+/* Points and counts use the heading face with tabular figures. */
+@utility num {
+  font-family: var(--font-heading);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

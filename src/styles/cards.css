@@ -1,0 +1,151 @@
+.game-card {
+  /* The face's dark base: the photo scrim, or for a card without artwork a dark
+     shade of its tier row's tone (--card-tone, set by GameCard). */
+  --card-scrim: var(--photo-scrim);
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  min-height: calc(var(--spacing) * 40);
+  color: var(--photo-foreground);
+}
+/* The visible card. It never takes pointer events, so hit-testing always lands
+   on the stationary .game-card box, and lifting the face cannot move the hit
+   area out from under a resting pointer (the old hover flicker loop). */
+.game-card-face {
+  pointer-events: none;
+  background: var(--card-scrim, var(--photo-scrim));
+}
+.game-card-face:has(.card-photo-empty) {
+  --card-scrim: color-mix(in oklab, var(--card-tone, var(--photo-scrim)) 30%, var(--photo-scrim));
+}
+.card-photo-art {
+  background: var(--card-scrim, var(--photo-scrim));
+  color: var(--photo-foreground);
+}
+.game-card-top {
+  padding: calc(var(--spacing) * 2) calc(var(--spacing) * 1.5) calc(var(--spacing) * 6);
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--card-scrim, var(--photo-scrim)) 90%, transparent), transparent);
+}
+.game-card-bottom {
+  padding: calc(var(--spacing) * 7) calc(var(--spacing) * 1.5) calc(var(--spacing) * 2);
+  background: linear-gradient(to bottom, transparent, color-mix(in srgb, var(--card-scrim, var(--photo-scrim)) 92%, transparent) 40%, var(--card-scrim, var(--photo-scrim)));
+}
+/* One 1px translucent highlight on the card's own clipped edge. It shares the
+   card's box and radius, so it follows the edge exactly with no inset gap. */
+.game-card-face::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  z-index: 20;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--photo-foreground) 14%, transparent);
+}
+.game-card-large {
+  width: 12rem;
+}
+@media (hover: hover) and (pointer: fine) {
+  button.game-card .game-card-face {
+    transition:
+      translate var(--motion-duration-base) ease-out,
+      box-shadow var(--motion-duration-base) ease-out;
+  }
+  button.game-card:hover .game-card-face {
+    translate: 0 calc(var(--spacing) * -0.5);
+    box-shadow: var(--shadow-sm);
+  }
+  button.game-card:active .game-card-face {
+    translate: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  button.game-card:hover .game-card-face {
+    translate: none;
+  }
+}
+.game-card-large .game-card-top {
+  padding: calc(var(--spacing) * 3);
+  padding-bottom: calc(var(--spacing) * 9);
+}
+.game-card-large .game-card-bottom {
+  padding: calc(var(--spacing) * 10) calc(var(--spacing) * 3) calc(var(--spacing) * 3);
+}
+@media (min-width: 640px) {
+  .game-card-top {
+    padding: calc(var(--spacing) * 3);
+    padding-bottom: calc(var(--spacing) * 8);
+  }
+  .game-card-bottom {
+    padding: calc(var(--spacing) * 10) calc(var(--spacing) * 3) calc(var(--spacing) * 3);
+  }
+}
+
+/* A tier's market row (board-parts.tsx). From 640px every slot gets an equal
+   share of the row; on phones see below. No card is ever narrower than
+   --market-card-min, which fits a full name of about sixteen characters and
+   five cost kinds on two lines. When the cards do not fit, the row scrolls
+   sideways on its own; the page never does. The padding keeps focus
+   rings and the hover lift inside the scroll box, and the negative margin puts
+   the cards back where they were. */
+.market-strip {
+  --market-card-min: 7rem;
+  --market-fade: calc(var(--spacing) * 6);
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(var(--market-card-min), 1fr);
+  gap: calc(var(--spacing) * 1.5);
+  margin: calc(var(--spacing) * -1.5);
+  padding: calc(var(--spacing) * 1.5);
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: calc(var(--spacing) * 1.5);
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in oklch, var(--muted-foreground) 45%, transparent) transparent;
+}
+.market-strip > * {
+  min-width: 0;
+  scroll-snap-align: start;
+}
+/* The edge with more cards beyond it fades out. */
+.market-strip[data-more-end] {
+  mask-image: linear-gradient(to right, #000 calc(100% - var(--market-fade)), transparent);
+}
+.market-strip[data-more-start] {
+  mask-image: linear-gradient(to left, #000 calc(100% - var(--market-fade)), transparent);
+}
+.market-strip[data-more-start][data-more-end] {
+  mask-image: linear-gradient(to right, transparent, #000 var(--market-fade), #000 calc(100% - var(--market-fade)), transparent);
+}
+/* On phones the column width comes from the row alone: two and a half cards
+   show, so the card at the edge is plainly cut off rather than looking a
+   little narrower than the rest, and nothing inside a card can change it. */
+@media (max-width: 639px) {
+  .market-strip {
+    grid-auto-columns: max(var(--market-card-min), calc((100% - 2 * calc(var(--spacing) * 1.5)) / 2.5));
+  }
+}
+@media (min-width: 640px) {
+  .market-strip {
+    gap: calc(var(--spacing) * 3);
+  }
+}
+
+/* Collect options backed by the pack's resource picture (actions.tsx).
+   The face reuses .game-card-face; --option-tone is the kind's supporting tone. */
+.resource-face {
+  color: var(--photo-foreground);
+}
+/* A chosen option is framed inside its own edge, not by a ring around it, so
+   chosen and unchosen options keep the same size and spacing. */
+.resource-option[aria-pressed="true"] .game-card-face::after {
+  box-shadow:
+    inset 0 0 0 2px var(--foreground),
+    inset 0 0 0 4px var(--background);
+}
+.resource-top {
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--photo-scrim) 70%, transparent), transparent);
+}
+.resource-bottom {
+  background: linear-gradient(to bottom, transparent, color-mix(in oklab, var(--option-tone) 30%, var(--photo-scrim)) 55%);
+}

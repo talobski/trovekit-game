@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 2,
+  "playerCounts": {
+    "min": 2,
+    "max": 4
+  },
+  "resourceSupply": {
+    "2": 4,
+    "3": 5,
+    "4": 7
+  },
+  "wildcardSupply": 5,
+  "startingResources": 0,
+  "collect": {
+    "distinct": 3,
+    "pair": 2,
+    "pairMinSupply": 4,
+    "allowPartialDistinct": true
+  },
+  "holdingCap": 10,
+  "reserveCap": 3,
+  "wildcardsOnReserve": 1,
+  "market": {
+    "tieredSlots": 4,
+    "uniqueSlots": 0
+  },
+  "uniqueLimitPerPlayer": 0,
+  "achievementsDrawn": {
+    "2": 3,
+    "3": 4,
+    "4": 5
+  },
+  "targetPoints": 15,
+  "tieBreak": "fewest-acquired"
+}

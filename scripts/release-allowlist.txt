@@ -1,0 +1,39 @@
+# Files allowed in a public source snapshot, checked by scripts/release-snapshot.ts.
+# One path per line; a trailing slash allows every tracked file under that directory.
+# A tracked file that matches nothing here fails the check: review it, then list it.
+# Ignored and untracked files (data/, dist/, node_modules/, test output, local
+# archives and notes) are never included, whatever this list says.
+
+# Project metadata, licensing and documentation
+LICENSE
+README.md
+CONTRIBUTING.md
+SECURITY.md
+licenses/
+docs/
+.github/
+
+# Toolchain and dependency lock
+.gitignore
+.nvmrc
+package.json
+package-lock.json
+tsconfig.json
+components.json
+vite.config.ts
+vitest.config.ts
+playwright.config.ts
+
+# Application source and static files
+index.html
+admin.html
+src/
+server/
+content/
+public/favicon.svg
+public/third-party-notices.txt
+
+# Tests, fictional fixtures and development scripts
+tests/
+e2e/
+scripts/
